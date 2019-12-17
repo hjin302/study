@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script>
+    const n = Number(prompt('숫자입력', '')); // let => const
+    let result = '';
+
+    if (n < 10000) {
+      for (let i = 0; i < n; i++) {
+        if (i % 2 === 0) {
+          result += 'a'
+        } else {
+          result += 'b'
+        }
+      }
+    }
+    
+    alert(result);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    const getRandom = (min, max) => parseInt(Math.random() * (max - min) + min);
+
+    const arr = [];
+    for (let i = 0; i < getRandom(50, 100); i++) {
+      arr.push(getRandom(1, 100));
+    }
+
+    function func(arr) {
+      return arr.filter(num => num%2 === 0);
+    }
+    console.log(func(arr));
+  </script>
+</head>
+<body>
+</body>
+</html>
