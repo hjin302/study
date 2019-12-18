@@ -14,9 +14,9 @@ const clockContainer = document.querySelector(".js-clock"),
     clockTitle.innerText = `${getDTime(hours)}:${getDTime(minutes)}:${getDTime(seconds)}`; 
   }
   
-  function init() {
+  function initClock() {
     getTime();
     setInterval(getTime, 1000);
   }
 
-  init();
+  initClock();
