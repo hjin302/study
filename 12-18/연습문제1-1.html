@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script>
+    const a = Number(prompt('A를 입력해주세요'));
+    const b = Number(prompt('B를 입력해주세요'));
+    let num = null;
+    let arr = [a, b];
+
+    function func(a, b) {
+      if (arr[a] > arr[b]) {
+        let num = arr[a];
+        arr[a] = arr[b];
+        arr[b] = num;
+      }
+      console.log(arr[1]);
+    }
+    func(a, b);
+  </script>
+</head>
+
+<body>
+</body>
+
+</html
