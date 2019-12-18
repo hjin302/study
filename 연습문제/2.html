@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script>
-    const a = Number(prompt('A를 입력해주세요'));
-    const b = Number(prompt('B를 입력해주세요'));
-    const c = Number(prompt('C를 입력해주세요'));
-    let num=null; 
-    let arr = [a, b, c];
-    function func(a, b, c) {
-      for(let i=0; i<arr.length-1; i++){
-          if(arr[a]>arr[b]){
-            let num = arr[a];
-            arr[a] =  arr[b];
-            arr[b] = num;
-          }
-        }   
-      
-      return arr[2];
+    const getRandom = (min, max) => parseInt(Math.random() * (max - min) + min);
+
+    const arr = [];
+    for (let i = 0; i < getRandom(50, 100); i++) {
+      arr.push(getRandom(1, 100));
     }
-    func(a, b, c);
+
+    function func(arr) {
+      return arr.filter(num => num%2 === 0);
+    }
+    console.log(func(arr));
   </script>
 </head>
 <body>
 </body>
-</html
+</html>
