@@ -1,10 +1,11 @@
 const p1 = {
   name : '하진',
   age : 20,
-  getName: () => p1.name,
-  setName: (new_name) => p1.name = new_name
+  getName: () => this.name,
+  setName: (new_name) => this.name = new_name
 }
+const log = console.log;
 
-console.log(p1.getName());
+log(p1.getName());
 p1.setName('김하진');
 
