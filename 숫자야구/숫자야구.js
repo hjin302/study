@@ -1,12 +1,19 @@
 var 바디 = document.body;
 
-var 숫자후보 = [1,2,3,4,5,6,7,8,9];
-var 숫자배열 = [];
+var 숫자후보;
+var 숫자배열;
 
-for(var i =0; i<4; i++){
-  var 뽑은것 = 숫자후보.splice(Math.floor(Math.random() * (9-i)),1)[0];
-  숫자배열.push(뽑은것);  
-} 
+function 숫자뽑기 () {
+  숫자후보 = [1,2,3,4,5,6,7,8,9];
+  숫자배열 = [];
+  
+  for(var i =0; i<4; i++){
+    var 뽑은것 = 숫자후보.splice(Math.floor(Math.random() * (9-i)),1)[0];
+    숫자배열.push(뽑은것);  
+  } 
+}
+숫자뽑기();
+
 console.log(숫자배열); 
 var 결과 = document.createElement('h1');
 바디.append(결과);
@@ -28,12 +35,7 @@ var 틀린횟수 = 0;
     결과.textContent = '홈런';
     입력창.value = '';
     입력창.focus();
-    숫자후보 = [1,2,3,4,5,6,7,8,9];
-    숫자배열 = [];  
-    for(var i =0; i<4; i++){
-      var 뽑은것 = 숫자후보.splice(Math.floor(Math.random() * (9-i)),1)[0];
-      숫자배열.push(뽑은것);  
-    } 
+    숫자뽑기(); 
     틀린횟수  = 0;
   }else{ // 답이 틀리면
      var 답배열 = 답.split('');
@@ -44,12 +46,7 @@ var 틀린횟수 = 0;
       결과.textContent = '10번 넘게 틀려서 실패! 답은 ' + 숫자배열.join(',') + ' 였습니다!';
       입력창.value = '';
       입력창.focus();
-      숫자후보 = [1,2,3,4,5,6,7,8,9];
-      숫자배열 = [];  
-      for(var i =0; i<4; i++){
-        var 뽑은것 = 숫자후보.splice(Math.floor(Math.random() * (9-i)),1)[0];
-        숫자배열.push(뽑은것);  
-      }
+      숫자뽑기();
       틀린횟수 =0;
      }else{ // 10번 미만으로 틀린경우
      console.log('답이 틀리면', 답배열);
