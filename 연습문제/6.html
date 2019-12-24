@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table {
+      border: 1px solid #444444;
+    }
+    th, td {
+      border: 1px solid #444444;
+    }
+  </style>  
+</head>
+<body>
+  <div id="main">
+    <table id="product_table">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>가격</th>
+          <th>수량</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>잠옷</td>
+          <td>10000</td>
+          <td>20</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const products = [{
+      name: '잠옷',
+      price: 10000,
+      quantity : 20,
+    }, {
+      name: '치약',
+      price: 5000,
+      quantity : 100,
+    }, {
+      name: '컴퓨터',
+      price: 100000,
+      quantity : 10,
+    }, {
+      name: '안경',
+      price: 70000,
+      quantity : 50,
+    }, {
+      name: '수건',
+      price: 5000,
+      quantity : 70,
+    }];
+
+    //const parent = document.getElementById('product_table');
+    const parent2 = document.getElementsByTagName('tbody');
+    
+
+    const r = document.createElement('tr');
+    parent2[0].append(r);
+    const a = document.createElement('td');
+    a.textContent = '잠옷';
+    const b = document.createElement('td');
+    b.textContent = '10000';
+    const c = document.createElement('td');
+    c.textContent = '20';
+    r.append(a);
+    r.append(b);
+    r.append(c);
+    
+
+  </script>
+</body>
+</html>
