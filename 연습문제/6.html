@@ -57,12 +57,15 @@
       quantity : 70,
     }];
 
-    //const parent = document.getElementById('product_table');
-    const parent2 = document.getElementsByTagName('tbody');
+    const parent = document.getElementById('product_table');
+    //const parent2 = document.getElementsByTagName('tbody');
     
 
     const r = document.createElement('tr');
-    parent2[0].append(r);
+    //parent2[0].append(r);
+    const last_child = parent.childNodes[3];
+    //console.log(last_child);
+    last_child.append(r);
     const a = document.createElement('td');
     a.textContent = '잠옷';
     const b = document.createElement('td');
