@@ -8,19 +8,19 @@ module.exports = {
     extensions: ['.js', '.vue'],
   },
   entry: {
-    app: './main.js',
+    app: path.join(__dirname, 'main.js'),
   },
   module: {
-    rules:[{
+    rules: [{
       test: /\.vue$/,
-      loader: 'vue-loader',
+      use: 'vue-loader',
     }],
   },
   plugins: [
     new VueLoaderPlugin(),
   ],
   output: {
-    filename: 'app.js',
+    filename: '[name].js',
     path: path.join(__dirname, 'dist'),
   },
 };
