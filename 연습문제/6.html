@@ -58,40 +58,21 @@
     }];
 
     const parent = document.getElementById('product_table');
-    //const parent2 = document.getElementsByTagName('tbody');
-    
-    //const r = document.createElement('tr');
-    //parent2[0].append(r);
-    const last_child = parent.childNodes[3];
-    //console.log(last_child);
+    const last_child = parent.getElementsByTagName('tbody')[0];
 
-    for(let i = 0; i < products.length; i++){
+    products.forEach(e => {
       const tr = document.createElement('tr');
+      const td1 = document.createElement('td');
+      const td2 = document.createElement('td');
+      const td3 = document.createElement('td'); 
+      td1.textContent = e.name;
+      td2.textContent = e.price;
+      td3.textContent = e.quantity;
+      tr.append(td1);
+      tr.append(td2);
+      tr.append(td3);
       last_child.append(tr);
-      for(let j = 0; j < 1; j++){
-        const td1 = document.createElement('td');
-        const td2 = document.createElement('td');
-        const td3 = document.createElement('td'); 
-        td1.textContent = products[i].name;
-        td2.textContent = products[i].price;
-        td3.textContent = products[i].quantity;
-        tr.append(td1);
-        tr.append(td2);
-        tr.append(td3);
-      }
-      console.log(products[i].name);
-    }
-
-    // const a = document.createElement('td');
-    // a.textContent = '잠옷';
-    // const b = document.createElement('td');
-    // b.textContent = '10000';
-    // const c = document.createElement('td');
-    // c.textContent = '20';
-    // r.append(a);
-    // r.append(b);
-    // r.append(c);
-    
+    })
 
   </script>
 </body>
