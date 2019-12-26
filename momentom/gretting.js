@@ -24,7 +24,22 @@ function askForName(){
 function paintGreeting(text){
   form.classList.remove(SHOWING_CN);
   greeting.classList.add(SHOWING_CN);
-  greeting.innerText=`Hello ${text}`;
+  greeting.innerText=`Hello ${text} `;
+  const btn = document.createElement('button');
+  const cd = document.getElementsByClassName('greeting')
+  btn.textContent = '이름변경';
+  cd[0].append(btn);
+  btn.addEventListener("click", onClickCdBtn);
+}
+
+function onClickCdBtn(event){
+  event.preventDefault(); 
+  const newName = document.createElement('input');
+  const btn = document.createElement('button');
+  const cd = document.getElementsByClassName('greeting')
+  btn.textContent = '변경하기';
+  cd[0].append(newName);
+  cd[0].append(btn);
 }
 
 function loadName() {
